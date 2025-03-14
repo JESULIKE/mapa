@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href="https://media.istockphoto.com/id/1187712122/es/vector/happy-earth-doodle.jpg?s=612x612&w=0&k=20&c=wRHinAO19p4ib0gdvlIkKWcCSpRVvaBST0u3nApLQpg=" />
 <title>Mapa interactivo</title>
 <style>
 * {
@@ -17,10 +16,115 @@
   height: 100vh;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:x,mm:K}=window,P=new x.Toolbar;P.attach(K);const F=P.render();F.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(F)})})()</script><script>((b,L,T,D)=>{const H=b();window.mm=H.Markmap.create("svg#mindmap",(L||H.deriveOptions)(D),T)})(()=>window.markmap,null,{"content":"Avances de la Did&#xe1;ctica en el Siglo XXI","children":[{"content":"2000s","children":[{"content":"Uso de TIC en educaci&#xf3;n","children":[{"content":"Expansi&#xf3;n de internet en las aulas","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"Primeras plataformas de e-learning","children":[],"payload":{"tag":"li","lines":"4,5"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"Aprendizaje basado en problemas (ABP)","children":[{"content":"Mayor enfoque en el pensamiento cr&#xed;tico","children":[],"payload":{"tag":"li","lines":"6,8"}}],"payload":{"tag":"h3","lines":"5,6"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"2010s","children":[{"content":"Gamificaci&#xf3;n en educaci&#xf3;n","children":[{"content":"Uso de mec&#xe1;nicas de juego en la ense&#xf1;anza","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Aplicaciones y plataformas educativas interactivas","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"h3","lines":"9,10"}},{"content":"Flipped Classroom","children":[{"content":"Uso de videos y recursos online previos a la clase","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"Mayor participaci&#xf3;n activa en el aula","children":[],"payload":{"tag":"li","lines":"14,15"}}],"payload":{"tag":"h3","lines":"12,13"}},{"content":"Aprendizaje adaptativo","children":[{"content":"Inteligencia artificial en plataformas educativas","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"Personalizaci&#xf3;n del aprendizaje","children":[],"payload":{"tag":"li","lines":"17,19"}}],"payload":{"tag":"h3","lines":"15,16"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"2020s","children":[{"content":"Aprendizaje h&#xed;brido","children":[{"content":"Combinaci&#xf3;n de clases presenciales y virtuales","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"Mayor flexibilidad educativa","children":[],"payload":{"tag":"li","lines":"22,23"}}],"payload":{"tag":"h3","lines":"20,21"}},{"content":"Educaci&#xf3;n basada en competencias","children":[{"content":"Enfoque en habilidades pr&#xe1;cticas","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"Evaluaciones aut&#xe9;nticas","children":[],"payload":{"tag":"li","lines":"25,26"}}],"payload":{"tag":"h3","lines":"23,24"}},{"content":"Inteligencia artificial y educaci&#xf3;n","children":[{"content":"Chatbots y asistentes virtuales para aprendizaje","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"An&#xe1;lisis de datos para mejorar la ense&#xf1;anza","children":[],"payload":{"tag":"li","lines":"28,29"}}],"payload":{"tag":"h3","lines":"26,27"}}],"payload":{"tag":"h2","lines":"19,20"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
+<script>
+// Código de D3.js y Markmap integrado directamente
+(function() {
+    function createMindMap() {
+        const svg = document.getElementById("mindmap");
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        
+        const data = {
+            "name": "Avances de la Didáctica en el Siglo XXI",
+            "children": [
+                {
+                    "name": "2000s",
+                    "children": [
+                        { "name": "Uso de TIC en educación", "children": [
+                            { "name": "Expansión de internet en las aulas" },
+                            { "name": "Primeras plataformas de e-learning" }
+                        ] },
+                        { "name": "Aprendizaje basado en problemas (ABP)", "children": [
+                            { "name": "Mayor enfoque en el pensamiento crítico" }
+                        ] }
+                    ]
+                },
+                {
+                    "name": "2010s",
+                    "children": [
+                        { "name": "Gamificación en educación", "children": [
+                            { "name": "Uso de mecánicas de juego en la enseñanza" },
+                            { "name": "Aplicaciones y plataformas educativas interactivas" }
+                        ] },
+                        { "name": "Flipped Classroom", "children": [
+                            { "name": "Uso de videos y recursos online previos a la clase" },
+                            { "name": "Mayor participación activa en el aula" }
+                        ] },
+                        { "name": "Aprendizaje adaptativo", "children": [
+                            { "name": "Inteligencia artificial en plataformas educativas" },
+                            { "name": "Personalización del aprendizaje" }
+                        ] }
+                    ]
+                },
+                {
+                    "name": "2020s",
+                    "children": [
+                        { "name": "Aprendizaje híbrido", "children": [
+                            { "name": "Combinación de clases presenciales y virtuales" },
+                            { "name": "Mayor flexibilidad educativa" }
+                        ] },
+                        { "name": "Educación basada en competencias", "children": [
+                            { "name": "Enfoque en habilidades prácticas" },
+                            { "name": "Evaluaciones auténticas" }
+                        ] },
+                        { "name": "Inteligencia artificial y educación", "children": [
+                            { "name": "Chatbots y asistentes virtuales para aprendizaje" },
+                            { "name": "Análisis de datos para mejorar la enseñanza" }
+                        ] }
+                    ]
+                }
+            ]
+        };
+        
+        const root = d3.hierarchy(data);
+        const treeLayout = d3.tree().size([width - 200, height - 200]);
+        treeLayout(root);
+        
+        const svgSelection = d3.select("#mindmap")
+            .attr("width", width)
+            .attr("height", height);
+        
+        const g = svgSelection.append("g")
+            .attr("transform", "translate(100,100)");
+        
+        const link = g.selectAll(".link")
+            .data(root.links())
+            .enter()
+            .append("line")
+            .attr("class", "link")
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y)
+            .style("stroke", "#999")
+            .style("stroke-width", "2px");
+        
+        const node = g.selectAll(".node")
+            .data(root.descendants())
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.x},${d.y})`);
+        
+        node.append("circle")
+            .attr("r", 8)
+            .style("fill", "#4285F4");
+        
+        node.append("text")
+            .attr("dy", -10)
+            .attr("text-anchor", "middle")
+            .text(d => d.data.name)
+            .style("font-size", "12px")
+            .style("fill", "#333");
+    }
+    
+    window.onload = function() {
+        createMindMap();
+    };
+})();
+</script>
 </body>
 </html>
